@@ -305,6 +305,8 @@ namespace Ryujinx.Graphics.Gpu.Engine
             }
 
             var indexBuffer = state.Get<IndexBufferState>(MethodOffset.IndexBufferState);
+			
+			FlushUboDirty();
 
             UpdateState(state, indexBuffer.First, indexBuffer.Count);
 
